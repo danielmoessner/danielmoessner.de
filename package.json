@@ -1,0 +1,35 @@
+{
+  "name": "danielmoessner.de",
+  "version": "1.0.0",
+  "description": "The personal site from Daniel Mössner.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css:build": "postcss src/style.css -o dist/style.css --env 'production'",
+    "css": "postcss src/style.css -o dist/style.css --env 'development'",
+    "js": "browserify src/script.js -o dist/script.js",
+    "js:build": "browserify src/script.js -p tinyify -o dist/script.js",
+    "clean": "del \"dist/*\"",
+    "copy": "copyfiles -f \"src/*.html\" \"src/*.svg\" \"dist/\"",
+    "html:watch": "onchange src/*.html -- npm run copy",
+    "build": "npm run clean && npm run copy && npm run css:build && npm run js:build"
+  },
+  "author": "Daniel Mössner",
+  "license": "ISC",
+  "dependencies": {
+    "alpinejs": "^2.2.5",
+    "tailwindcss": "^1.2.0"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.1.0",
+    "autoprefixer": "^9.7.5",
+    "browserify": "^16.5.1",
+    "copyfiles": "^2.2.0",
+    "cssnano": "^4.1.10",
+    "del": "^5.1.0",
+    "del-cli": "^3.0.0",
+    "onchange": "^6.1.0",
+    "postcss": "^7.0.27",
+    "postcss-cli": "^7.1.0",
+    "tinyify": "^2.5.2"
+  }
+}
