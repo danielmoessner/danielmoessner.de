@@ -9,7 +9,7 @@
     "js": "browserify src/script.js -o dist/script.js",
     "js:build": "browserify src/script.js -p tinyify -o dist/script.js",
     "clean": "del \"dist/*\"",
-    "copy": "copyfiles -f \"src/*.html\" \"src/*.svg\" \"dist/\"",
+    "copy": "copyfiles -f \"src/*.html\" \"src/*.svg\" \"src/*.ico\" \"dist/\"",
     "html:watch": "onchange src/*.html -- npm run copy",
     "build": "npm run clean && npm run copy && npm run css:build && npm run js:build"
   },
