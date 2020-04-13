@@ -11,3 +11,11 @@
 .text-gray-650 {
 	color: #5D6B80;
 }
+
+.cc-banner {
+	max-width: 1560px;
+}
+
+.cc-invisible {
+	@apply .hidden;
+}
