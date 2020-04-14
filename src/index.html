@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta content="width=device-width, initial-scale=1" name="viewport">
-	<title>Daniel Mössner - Programmer &amp; Web Designer</title>
+	<title>Daniel Mössner - Ich helfe Immobilienmaklern ihre Angebote online darzustellen</title>
 	<meta content="Ich erstelle für Immobilienmakler Webseiten, die mit bestehender Immobiliensoftware kommunizieren und Immobilien direkt hochladen &amp; online präsentieren, sodass für Immobilienmakler mehr Zeit bleibt sich auf das Hauptgeschäft zu konzentrieren." name="description">
 	<meta content="Daniel Mössner" name="author">
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
@@ -208,8 +208,8 @@
 									</dl>
 								</div>
 								<div class="flex flex-col items-end w-full md:w-1/3 lg:w-1/2 xl:w-3/5">
-									<a href="">Impressum</a>
-									<a href="">Datenschutz</a>
+									<a href="/impressum">Impressum</a>
+									<a href="/datenschutz">Datenschutz</a>
 								</div>
 							</div>
 						</div>
@@ -233,11 +233,11 @@
 				"policy": "Cookie-Richtlinie"
 			}
 		});
-		document.querySelector(".cc-banner").className += " flex items-center justify-center fixed bottom-0 mb-3 mx-auto w-full right-0 left-0 pl-6 pr-3 py-3 shadow-lg rounded-lg bg-blue-900 text-gray-300 justify-between";
-		document.querySelector(".cc-btn.cc-allow").className += " flex items-center justify-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded text-gray-900 bg-white transition ease-in-out duration-150 hover:text-gray-600 focus:outline-none focus:shadow-outline cursor-pointer";
+		document.querySelector(".cc-banner").className += " flex items-start md:items-center flex-col md:flex-row fixed bottom-0 mb-3 xl:w-full right-0 left-0 pl-6 pr-3 py-3 shadow-lg rounded-lg bg-blue-900 text-gray-300 justify-between mx-3 xl:mx-auto";
+		document.querySelector(".cc-btn.cc-allow").className += " flex mr-4 md:mr-0 items-center justify-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded text-gray-900 bg-white transition ease-in-out duration-150 hover:text-gray-600 focus:outline-none focus:shadow-outline cursor-pointer";
 		document.querySelector(".cc-revoke").className += " fixed bottom-0 left-0 bg-blue-900 text-gray-300 ml-6 rounded-lg px-2 py-1 rounded-b-none cursor-pointer";
-		document.querySelector(".cc-btn.cc-deny").className += " bg-transparent mr-4 cursor-pointer";
-		document.querySelector(".cc-compliance").className += " flex items-center";
+		document.querySelector(".cc-btn.cc-deny").className += " bg-transparent md:mr-4 cursor-pointer";
+		document.querySelector(".cc-compliance").className += " mt-4 md:mt-0 flex items-center flex-row-reverse md:flex-row";
 
 	</script>
 </body>
