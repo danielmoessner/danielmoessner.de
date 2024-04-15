@@ -1,0 +1,40 @@
+---
+import Footer from "../components/Footer.astro";
+import Nav from "../components/Nav.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Daniel Mössner" description="">
+  <Nav />
+  <section>
+    <article>
+      <h1 style="margin-top: 0;">Kontakt</h1>
+      <p>
+        Ich freue mich von Ihnen zu hören. Zusammen modernisieren wir ihre
+        Abläufe. Schreiben Sie mir einfach ein <a
+          href="mailto:code@danielmoessner.de">E-Mail</a
+        > und wir vereinbaren ein Erstgespräch.
+      </p>
+      <h2>Ablauf</h2>
+      <ol>
+        <li>Kontaktaufnahme</li>
+        <li>Erstgespräch mit Bedarfsanalyse</li>
+        <li>
+          Falls ich Ihnen helfen kann: Angebot
+          <ul>
+            <li>Projektbeschreibung</li>
+            <li>Zeitplan</li>
+            <li>Kosten</li>
+          </ul>
+        </li>
+      </ol>
+      <h2>Kontaktdaten</h2>
+      <p>
+        <a href="mailto:code@danielmoessner.de">code@danielmoessner.de</a>
+        <br />
+        <a href="tel:004917638385646">0176 3838 5646</a>
+      </p>
+    </article>
+  </section>
+  <Footer />
+</Layout>

@@ -1,0 +1,27 @@
+---
+interface Props {
+  date: string;
+  company: string;
+  subtitle?: string;
+}
+
+const { date, company, subtitle } = Astro.props;
+---
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-wrap: balance;">{date}</th>
+      <th>
+        <b>{company}</b>
+        <br />
+        <small style="white-space: nowrap;">{subtitle}</small>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <td colspan="2">
+      <slot />
+    </td>
+  </tbody>
+</table>
