@@ -42,12 +42,10 @@ import { CV } from "../content/cv.js";
       {
         CV.steps.map((s) => (
           <div>
-            <p>
-              <h3>
-                {s.company} - {s.job}
-              </h3>
-              <small>{s.date}</small>
-            </p>
+            <h3>
+              {s.company} - {s.job}
+            </h3>
+            <small>{s.date}</small>
             <ul>
               {s.work.map((w) => (
                 <li>{w}</li>
