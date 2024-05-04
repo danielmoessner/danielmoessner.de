@@ -1,0 +1,25 @@
+@media print {
+  astro-dev-toolbar {
+    display: none !important;
+  }
+}
+h2 {
+  border-bottom: 1px solid black;
+}
+#profile {
+  margin-top: 24px;
+}
+#profile p {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+#skills p {
+  margin: 0.25em 0;
+}
+#career h3 {
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+#career ul {
+  margin-top: 8px;
+}

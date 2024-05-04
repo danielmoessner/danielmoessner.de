@@ -4,223 +4,55 @@ import CvStep from "../components/CvStep.astro";
 import Footer from "../components/Footer.astro";
 import Nav from "../components/Nav.astro";
 import Layout from "../layouts/Layout.astro";
-
-const birthyear = new Date("1998-02-02").getTime();
-const current = new Date().getTime();
-
-const years = (current - birthyear) / 1000 / 60 / 60 / 24 / 365.25;
-const yearsRounded = Math.floor(years);
+import { CV } from "../content/cv.js";
 ---
 
 <Layout title="Daniel Mössner" description="">
   <Nav />
   <section>
     <article>
-      <h1 style="margin-top: 0;">CV - Lebenslauf</h1>
+      <div style="display: flex; justify-content: space-between;">
+        <h1 style="margin-top: 0;">CV - Lebenslauf</h1>
+        <button onclick="window.open('/cv', '_blank').print();">Print</button>
+      </div>
       <p>
-        Located in Munich and {yearsRounded} years old <br />
-        <a target="_blank" href="https://www.linkedin.com/in/danielmoessner/"
-          >LinkedIn</a
-        >
+        Located in {CV.location} and {CV.age} years old <br />
+        <a target="_blank" href={CV.linkedin}>LinkedIn</a>
         <br />
-        <a target="_blank" href="https://github.com/danielmoessner">GitHub</a>
+        <a target="_blank" href={CV.github}>GitHub</a>
+        <br />
       </p>
       <h2>Professional Profile</h2>
       <p>
         <i>
-          A swiss army knife kind of Full-Stack Engineer, well versed in Python
-          and Vue, aiming for maintainable code.
+          {CV.oneliner}
         </i>
       </p>
       <p>
-        More than seven years of professional experience working with Django in
-        various areas, including machinery rental services, government
-        procurement, law clinic case management, and multiple smaller projects.
-        Additionally deep understanding of Vue3, having built numerous frontends
-        from the ground up. Experienced in setting up CI/CD Pipelines with
-        GitHub Actions and automatic testing and deployment.
+        {CV.summary}
       </p>
       <h2>Core Skills</h2>
       <ul>
-        <li><b>Backend:</b> Python, Django, Flask, FastAPI, JSON</li>
-        <li><b>Frontend:</b> Vue3, Typescript, TailwindCSS, HTMX, JSON</li>
-        <li><b>DevOps:</b> Docker, GitHub Actions, Terraform, AWS, Azure</li>
-        <li>
-          <b>Architecture:</b> Domain-Driven-Design, Event-Sourcing, Clean Architecture
-        </li>
+        {
+          Object.entries(CV.skills).map(([key, value]) => (
+            <li>
+              <b>{key}:</b> {value}
+            </li>
+          ))
+        }
       </ul>
       <h2>Career Summary</h2>
-      <CvStep
-        date="April 2023 - Now (Full-Time)"
-        company="FactField GmbH"
-        subtitle="Full-Stack Engineer"
-      >
-        <ul>
-          <li>
-            Worked with Python, Vue3, GitHub Actions, Docker, Django, HTML,
-            JavaScript, TypeScript, Kubernetes, AWS, HTMX, Flask and
-            TailwindCSS.
-          </li>
-          <li>
-            Replaced the entire Data Management System with a new platform.
-          </li>
-          <li>Used Domain-Driven-Design and Event-Sourcing principles.</li>
-          <li>
-            Changed the culture to use Continuous Delivery and built a
-            Deployment Pipeline to improve developer throughput.
-          </li>
-          <li>
-            Setup Flask Microservices for AI related tasks and web scrapers.
-          </li>
-          <li>Built API endpoints for interaction with external services.</li>
-        </ul>
-      </CvStep>
-      <CvStep
-        date="September 2022 - December 2022 (Freelance), February 2021 - January 2022 (Freelance)"
-        company="Law&Orga"
-        subtitle="Full-Stack Engineer & Lead Developer"
-      >
-        <ul>
-          <li>
-            Worked with Python, Vue3, GitHub Actions, Docker, Django, HTML,
-            JavaScript, TypeScript, Linux, Kubernetes and TailwindCSS.
-          </li>
-          <li>
-            Worked as lead developer with four other developers on different
-            features. Among other things, a custom mail server, a matrix chat
-            server and a new encryption structure.
-          </li>
-          <li>
-            Set up layered architecture and domain-driven design principles.
-          </li>
-          <li>
-            Built a custom API-layer that is replacing Django REST Framework.
-          </li>
-          <li>
-            Built a custom use-case layer that hosts all the business
-            functionality and improves testing and logging.
-          </li>
-          <li>
-            Worked on asymmetric and symmetric encryption, as the application
-            deals with a lot of sensitive data.
-          </li>
-          <li>
-            Set up GitHub Action Pipelines for continuous deployment and
-            automatic testing.
-          </li>
-          <li>Rebuilt the old angular frontend in Vue3.</li>
-          <li>
-            Open-Source Code can be found on Github: <a
-              href="https://github.com/lawandorga"
-              >https://github.com/lawandorga</a
-            >.
-          </li>
-        </ul>
-      </CvStep>
-      <CvStep
-        date="January 2022 - September 2022 (Freelance), July 2021 - December 2021 (Full-Time)"
-        company="GovRadar GmbH"
-        subtitle="Full-Stack Engineer"
-      >
-        <ul>
-          <li>
-            Worked with Python, Vue3, GitHub Actions, Docker, FastAPI, HTML,
-            JavaScript, TypeScript, Linux, Azure and TailwindCSS.
-          </li>
-          <li>Wrote various FastAPI backend services.</li>
-          <li>Built the Vue3 frontend from the ground up.</li>
-          <li>Set up open-telemetry and integrated it with Elastic.</li>
-          <li>
-            Set up GitHub Action Pipelines for testing and automated deployment.
-          </li>
-          <li>
-            Got their SaaS platform off the ground and saw their first users
-            using it.
-          </li>
-          <li>
-            Wrote my Bachelor's Thesis about Testing in Microservice
-            Architectures with Daniel Schiessl (CTO) as supervisor.
-          </li>
-        </ul>
-      </CvStep>
-      <CvStep
-        date="September 2017 - Today (Sole-Proprietor)"
-        company="Tortuga Webdesign"
-        subtitle="Programmer"
-      >
-        <ul>
-          <li>
-            Worked with HTML, CSS, TailwindCSS, Bootstrap, Django, Gatsby,
-            NextJS, React, Webflow and Wordpress.
-          </li>
-          <li>
-            Built various websites for customers from many different areas.
-          </li>
-          <li>Hired a part-time employee.</li>
-          <li>
-            Used different tools, including, NextJS, Gatsby, TailwindCSS,
-            Bootstrap, Django, WordPress, Svelte, Webflow, Bare HTML and CSS,
-            and Shopware.
-          </li>
-          <li>
-            The portfolio can be found here:
-            <a href="https://tortuga-webdesign.de"
-              >https://tortuga-webdesign.de</a
-            >.
-          </li>
-          <li>Founded Tortuga Webdesign 2017.</li>
-        </ul>
-      </CvStep>
-      <CvStep
-        date="October 2016 - June 2021 (Part-Time)"
-        company="Schätz GmbH"
-        subtitle="Programmer"
-      >
-        <ul>
-          <li>
-            Worked with Python, Bootstrap, GitHub Actions, Django, HTML, Linux
-            and TailwindCSS.
-          </li>
-          <li>Responsible for the technical aspects of the online shop.</li>
-          <li>
-            Helped to start a whole new business venture, machinery rental
-            services.
-          </li>
-          <li>
-            Designed and developed the website for the new machinery rental
-            business.
-          </li>
-          <li>
-            Designed and developed the machinery rental software with which
-            invoices and rental contracts can be written.
-          </li>
-          <li>
-            The shop can be found here: <a href="https://schaetz-shop.de/"
-              >https://schaetz-shop.de/</a
-            >.
-          </li>
-          <li>
-            The machine rental website can be found here: <a
-              href="https://maschinenverleih-schaetz.de/"
-              >https://maschinenverleih-schaetz.de/</a
-            >.
-          </li>
-        </ul>
-      </CvStep>
-      <CvStep
-        date="February 2018 - December 2022"
-        company="LMU Munich"
-        subtitle="B.A.Sc. Computer Science (1.7)"
-      >
-        <ul>
-          <li>
-            Wrote my Bachelor's Thesis about Testing in Microservice
-            Architectures.
-          </li>
-          <li>Had all exams completed by February 2021.</li>
-        </ul>
-      </CvStep>
-
+      {
+        CV.steps.map((step) => (
+          <CvStep date={step.date} company={step.company} subtitle={step.job}>
+            <ul>
+              {step.work.map((w) => (
+                <li>{w}</li>
+              ))}
+            </ul>
+          </CvStep>
+        ))
+      }
       <Cta />
     </article>
   </section>

@@ -1,0 +1,62 @@
+---
+import { CV } from "../content/cv.js";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>cv-{CV.printname}</title>
+    <link rel="stylesheet" href="/print.css" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/ico" href="/favicon.ico" />
+  </head>
+  <body>
+    <div id="head">
+      <h1>{CV.name} - {CV.title}</h1>
+      <div>
+        Location: <b>{CV.location}</b> - Mobile: <b>{CV.phone}</b> - E-Mail: <b
+          >{CV.email}</b
+        >
+      </div>
+    </div>
+    <div id="profile">
+      <h2>Professional Profile</h2>
+      <p><i>{CV.oneliner}</i></p>
+      <p>{CV.summary}</p>
+    </div>
+    <div id="skills">
+      <h2>Skills</h2>
+      <div>
+        {
+          Object.entries(CV.skills).map(([k, v]) => (
+            <p>
+              <b>{k}:</b>
+              {v}
+            </p>
+          ))
+        }
+      </div>
+    </div>
+    <div id="career">
+      <h2>Career Summary</h2>
+      {
+        CV.steps.map((s) => (
+          <div>
+            <p>
+              <h3>
+                {s.company} - {s.job}
+              </h3>
+              <small>{s.date}</small>
+            </p>
+            <ul>
+              {s.work.map((w) => (
+                <li>{w}</li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </body>
+</html>
