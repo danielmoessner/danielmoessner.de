@@ -11,10 +11,7 @@ import { CV } from "../content/_cv.js";
   <Nav />
   <section>
     <article>
-      <div style="display: flex; justify-content: space-between;">
-        <h1 style="margin-top: 0;">CV - Lebenslauf</h1>
-        <button onclick="window.open('/cv', '_blank').print();">Print</button>
-      </div>
+      <h1 style="margin-top: 0;">Über Mich</h1>
       <p>
         Located in {CV.location} and {CV.age} years old <br />
         <a target="_blank" href={CV.linkedin}>LinkedIn</a>
@@ -22,7 +19,24 @@ import { CV } from "../content/_cv.js";
         <a target="_blank" href={CV.github}>GitHub</a>
         <br />
       </p>
-      <h2>Professional Profile</h2>
+      <h2>Zertifikate</h2>
+      <ul>
+        <li>
+          <a href="/certificates/pycon.pdf" target="_blank">PyCon 2024</a>
+        </li>
+        <li>
+          <a href="/certificates/uni.pdf" target="_blank">
+            Bachelor of Science - Informatik
+          </a>
+        </li>
+      </ul>
+      <div
+        style="display: flex; justify-content: space-between; align-items: baseline;"
+      >
+        <h2>CV - Lebenslauf</h2>
+        <button onclick="window.open('/cv', '_blank').print();">Print</button>
+      </div>
+      <h3>Professional Profile</h3>
       <p>
         <i>
           {CV.oneliner}
@@ -31,7 +45,7 @@ import { CV } from "../content/_cv.js";
       <p>
         {CV.summary}
       </p>
-      <h2>Core Skills</h2>
+      <h3>Core Skills</h3>
       <ul>
         {
           Object.entries(CV.skills).map(([key, value]) => (
@@ -41,7 +55,7 @@ import { CV } from "../content/_cv.js";
           ))
         }
       </ul>
-      <h2>Career Summary</h2>
+      <h3>Career Summary</h3>
       {
         CV.steps.map((step) => (
           <CvStep date={step.date} company={step.company} subtitle={step.job}>
