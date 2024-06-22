@@ -5,6 +5,7 @@ import Footer from "../components/Footer.astro";
 import Nav from "../components/Nav.astro";
 import Layout from "../layouts/Layout.astro";
 import { CV } from "../content/_cv.js";
+import { CERTIFICATES } from "../content/_certificates";
 ---
 
 <Layout title="Daniel Mössner" description="">
@@ -21,14 +22,15 @@ import { CV } from "../content/_cv.js";
       </p>
       <h2>Zertifikate</h2>
       <ul>
-        <li>
-          <a href="/certificates/pycon.pdf" target="_blank">PyCon 2024</a>
-        </li>
-        <li>
-          <a href="/certificates/uni.pdf" target="_blank">
-            Bachelor of Science - Informatik
-          </a>
-        </li>
+        {
+          CERTIFICATES.map((c) => (
+            <li>
+              <a href={c.pdf} target="_blank">
+                {c.name}
+              </a>
+            </li>
+          ))
+        }
       </ul>
       <div
         style="display: flex; justify-content: space-between; align-items: baseline;"
