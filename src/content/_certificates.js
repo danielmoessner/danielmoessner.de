@@ -12,7 +12,7 @@ export const CERTIFICATES = [
     {
         name: "CD - Better Software Faster",
         date: "2023-03-21",
-        pdf: "/certificates/deployment-pipelines.pdf"
+        pdf: "/certificates/cd-better-software.pdf"
     },
     {
         name: "Bachelor of Science - Informatik",
