@@ -28,7 +28,7 @@ export const CV = {
     steps: [
         {
             date: "April 2023 - Now (Full-Time)",
-            company: "FactField GmbH",
+            company: "FactField GmbH (BurdaVerlag Data Publishing GmbH)",
             job: "Full-Stack Engineer",
             work: [
                 "Worked with Python, Vue3, GitHub Actions, Docker, Django, HTML, JavaScript, TypeScript, Kubernetes, AWS, HTMX, Flask and TailwindCSS.",
@@ -37,6 +37,7 @@ export const CV = {
                 "Changed the culture to use Continuous Delivery and built a Deployment Pipeline to improve developer throughput.",
                 "Setup Flask Microservices for AI related tasks and web scrapers.",
                 "Built API endpoints for interaction with external services.",
+                "Improved the interfaces between different departments to better research, validate and deliver data."
             ]
         },
         {
