@@ -1,5 +1,12 @@
 ---
 import { CV } from "../content/_cv.js";
+
+const cleanLink = (url) => {
+  let u = url.replace("https://", "");
+  u = u.replace("http://", "");
+  u = u.replace("www.", "");
+  return u;
+};
 ---
 
 <!doctype html>
@@ -18,6 +25,10 @@ import { CV } from "../content/_cv.js";
         Location: <b>{CV.location}</b> - Mobile: <b>{CV.phone}</b> - E-Mail: <b
           >{CV.email}</b
         >
+      </div>
+      <div>
+        GitHub: <a href={CV.github}><b>{cleanLink(CV.github)}</b></a> - LinkedIn:
+        <a href={CV.linkedin}><b>{cleanLink(CV.linkedin)}</b></a>
       </div>
     </div>
     <div id="profile">
