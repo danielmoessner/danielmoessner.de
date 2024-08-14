@@ -27,7 +27,7 @@ export const CV = {
     github: "https://github.com/danielmoessner",
     // oneliner: "A swiss army knife kind of Full-Stack Engineer, well versed in Python and Vue, aiming for maintainable code.",
     oneliner: "Full Stack Engineer - Interested in Software Architecture, DevOps, CI/CD, Python, Typescript, Domain-Driven-Design and aiming for better software faster.",
-    summary: `More than ${numberToWord(getYearsSince(programmingStartYear))} years of professional experience working with Python in various areas, including data management systems for market research, machinery rental services, government procurement, law clinic case management, and multiple smaller projects. Additionally deep understanding of Typescript, having built numerous frontends from the ground up. Experienced in setting up CI/CD Pipelines with GitHub Actions and automatic testing and deployment.`,
+    summary: `More than ${numberToWord(getYearsSince(programmingStartYear))} years of professional experience working with Python in various areas, including data management systems for market research, machinery rental services, government procurement, law clinic case management, and multiple smaller projects. Additionally deep understanding of Typescript, having built numerous frontends from the ground up. Experienced in setting up CI/CD Pipelines with GitHub Actions and automated testing and deployment.`,
     skills: {
         Backend: "Python, Django, Flask, FastAPI, JSON",
         Frontend: "Vue3, Typescript, TailwindCSS, HTMX, JSON",
