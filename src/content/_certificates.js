@@ -1,5 +1,10 @@
 export const CERTIFICATES = [
     {
+        name: "Introduction to Electricity and Magnetism",
+        date: "2024-07-01",
+        pdf: "/certificates/introduction-to-electricity-and-magnetism.pdf",
+    },
+    {
         name: "PyCon 24",
         date: "2024-04-02",
         pdf: "/certificates/pycon.pdf"
