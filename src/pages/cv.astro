@@ -1,15 +1,9 @@
 ---
 import { CV } from "../content/_cv.js";
-
-const cleanLink = (url) => {
-  let u = url.replace("https://", "");
-  u = u.replace("http://", "");
-  u = u.replace("www.", "");
-  return u;
-};
+import { formatDateString } from "../utils/date";
+import { cleanLink } from "../utils/link";
 ---
 
-<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -49,7 +43,7 @@ const cleanLink = (url) => {
       </div>
     </div>
     <div id="career">
-      <h2>Career Summary</h2>
+      <h2>Career</h2>
       {
         CV.steps.map((s) => (
           <div>
@@ -66,5 +60,27 @@ const cleanLink = (url) => {
         ))
       }
     </div>
+    {
+      CV.certificates && (
+        <div id="certificates">
+          <h2>Certificates</h2>
+          <ul>
+            {CV.certificates.map((c) => (
+              <li>
+                <a target="_blank" href={import.meta.env.VITE_URL + c.pdf}>
+                  {formatDateString(c.date)} | {c.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )
+    }
   </body>
 </html>
+
+<style>
+  a {
+    color: black;
+  }
+</style>

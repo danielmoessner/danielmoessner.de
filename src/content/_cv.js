@@ -1,3 +1,5 @@
+import { CERTIFICATES } from "./_certificates";
+
 const getYearsSince = (dt) => {
     const birthyear = new Date(dt).getTime();
     const current = new Date().getTime();
@@ -115,5 +117,6 @@ export const CV = {
                 "Had all exams completed by February 2021."
             ]
         }
-    ]
+    ],
+    certificates: CERTIFICATES,
 }
