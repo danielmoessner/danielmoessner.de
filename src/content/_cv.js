@@ -46,6 +46,8 @@ export const CV = {
                 "Replaced the entire Data Management System with a new platform.",
                 "Used Domain-Driven-Design and Event-Sourcing principles.",
                 "Changed the culture to use Continuous Delivery and built a Deployment Pipeline to improve developer throughput.",
+                "Setup the whole infrastructure with Kubernetes and Terraform on AWS.",
+                "Mentored and taught the junior developer.",
                 "Setup Flask Microservices for AI related tasks and web scrapers.",
                 "Built API endpoints for interaction with external services.",
                 "Improved the interfaces between different departments to better research, validate and deliver data."
