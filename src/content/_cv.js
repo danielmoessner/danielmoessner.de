@@ -38,7 +38,16 @@ export const CV = {
     },
     steps: [
         {
-            date: "April 2023 - Now (Full-Time)",
+            date: "January 2025 - Now (Full-Time)",
+            company: "Peter Park Systems GmbH",
+            job: "Full-Stack Engineer",
+            work: [
+                "Worked with NestJS, Vue3.",
+                "Worked on current sprint tickets within a broad range of services and frontends.",
+            ]
+        },
+        {
+            date: "April 2023 - October 2024 (Full-Time)",
             company: "FactField GmbH (BurdaVerlag Data Publishing GmbH)",
             job: "Full-Stack Engineer",
             work: [
