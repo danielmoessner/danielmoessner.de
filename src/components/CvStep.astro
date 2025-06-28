@@ -3,15 +3,19 @@ interface Props {
   date: string;
   company: string;
   subtitle?: string;
+  duration?: string;
 }
 
-const { date, company, subtitle } = Astro.props;
+const { date, company, subtitle, duration } = Astro.props;
 ---
 
 <table>
   <thead>
     <tr>
-      <th style="text-wrap: balance;">{date}</th>
+      <th style="text-wrap: balance;">
+        {date}
+        {duration ? <br /><small style="white-space: nowrap; font-weight: lighter; font-size: 0.75rem; line-height: 1px;">({duration})</small> : ''}
+      </th>
       <th>
         <b>{company}</b>
         <br />

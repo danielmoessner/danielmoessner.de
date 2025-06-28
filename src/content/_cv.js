@@ -61,7 +61,8 @@ export const CV = {
       ],
     },
     {
-      date: "April 2023 - October 2024 (Full-Time)",
+      date: "April 2023 - December 2024 (Full-Time)",
+      duration: "1 year 9 months",
       company: "FactField GmbH (BurdaVerlag Data Publishing GmbH)",
       job: "Full-Stack Engineer",
       work: [
@@ -76,7 +77,8 @@ export const CV = {
       ],
     },
     {
-      date: "September 2022 - December 2022 (Freelance), February 2021 - January 2022 (Freelance)",
+      date: "February 2021 - März 2023 (Freelance)",
+      duration: "1 year 2 months",
       company: "Law&Orga",
       job: "Full-Stack Engineer & Lead Developer",
       work: [
@@ -92,7 +94,8 @@ export const CV = {
       ],
     },
     {
-      date: "January 2022 - September 2022 (Freelance), July 2021 - December 2021 (Full-Time)",
+      date: "July 2021 - December 2021 (Full-Time), January 2022 - September 2022 (Freelance)",
+      duration: "1 year 3 months",
       company: "GovRadar GmbH",
       job: "Full-Stack Engineer",
       work: [
@@ -107,6 +110,7 @@ export const CV = {
     },
     {
       date: "September 2017 - Today (Sole-Proprietor)",
+      duration: "8 years +",
       company: "Tortuga Webdesign",
       job: "Programmer",
       work: [
@@ -120,6 +124,7 @@ export const CV = {
     },
     {
       date: "October 2016 - June 2021 (Part-Time)",
+      duration: "4 years 8 months",
       company: "Schätz GmbH",
       job: "Programmer",
       work: [
@@ -134,6 +139,7 @@ export const CV = {
     },
     {
       date: "February 2018 - December 2022",
+      duration: "4 years 10 months",
       company: "LMU Munich",
       job: "B.A.Sc. Computer Science (1.7)",
       work: [

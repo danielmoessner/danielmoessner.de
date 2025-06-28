@@ -60,7 +60,7 @@ import { CERTIFICATES } from "../content/_certificates";
       <h3>Career Summary</h3>
       {
         CV.steps.map((step) => (
-          <CvStep date={step.date} company={step.company} subtitle={step.job}>
+          <CvStep date={step.date} company={step.company} subtitle={step.job} duration={step.duration}>
             <ul>
               {step.work.map((w) => (
                 <li>{w}</li>

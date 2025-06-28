@@ -50,7 +50,8 @@ import { cleanLink } from "../utils/link";
             <h3>
               {s.company} - {s.job}
             </h3>
-            <small>{s.date}</small>
+            <small>{s.date} {s.duration && <> | {s.duration}</>}</small>
+            
             <ul>
               {s.work.map((w) => (
                 <li>{w}</li>
