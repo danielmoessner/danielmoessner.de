@@ -1,5 +1,10 @@
 export const CERTIFICATES = [
   {
+    name: "We Are Developers Conference 2025",
+    date: "2025-07-11",
+    pdf: "/certificates/we-are-developers-2025.pdf",
+  },
+  {
     name: "RxJS Masterclass",
     date: "2025-05-10",
     pdf: "/certificates/rxjs-masterclass.pdf",

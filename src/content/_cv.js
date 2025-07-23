@@ -1,4 +1,5 @@
 import { CERTIFICATES } from "./_certificates";
+import { REFERENCES } from "./_references";
 
 const getYearsSince = (dt) => {
   const birthyear = new Date(dt).getTime();
@@ -61,7 +62,7 @@ export const CV = {
       ],
     },
     {
-      date: "April 2023 - December 2024 (Full-Time)",
+      date: "April 2023 - October 2024 (Full-Time)",
       duration: "1 year 9 months",
       company: "FactField GmbH (BurdaVerlag Data Publishing GmbH)",
       job: "Full-Stack Engineer",
@@ -74,11 +75,12 @@ export const CV = {
         "Setup Flask Microservices for AI related tasks and web scrapers.",
         "Built API endpoints for interaction with external services.",
         "Improved the interfaces between different departments to better research, validate and deliver data.",
+        "(Travelled to America and New Zealand in November and December.)",
       ],
     },
     {
       date: "February 2021 - März 2023 (Freelance)",
-      duration: "1 year 2 months",
+      duration: "2 year 2 months",
       company: "Law&Orga",
       job: "Full-Stack Engineer & Lead Developer",
       work: [
@@ -149,4 +151,5 @@ export const CV = {
     },
   ],
   certificates: CERTIFICATES,
+  references: REFERENCES,
 };

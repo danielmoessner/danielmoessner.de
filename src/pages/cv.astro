@@ -50,8 +50,10 @@ import { cleanLink } from "../utils/link";
             <h3>
               {s.company} - {s.job}
             </h3>
-            <small>{s.date} {s.duration && <> | {s.duration}</>}</small>
-            
+            <small>
+              {s.date} {s.duration && <> | {s.duration}</>}
+            </small>
+
             <ul>
               {s.work.map((w) => (
                 <li>{w}</li>
@@ -61,6 +63,22 @@ import { cleanLink } from "../utils/link";
         ))
       }
     </div>
+    {
+      CV.references && (
+        <div id="employment-references">
+          <h2>Employment References</h2>
+          <ul>
+            {CV.references.map((c) => (
+              <li>
+                <a target="_blank" href={import.meta.env.VITE_URL + c.pdf}>
+                  {formatDateString(c.date)} | {c.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )
+    }
     {
       CV.certificates && (
         <div id="certificates">
