@@ -1,7 +1,7 @@
 import { CERTIFICATES } from "./_certificates";
 import { REFERENCES } from "./_references";
 
-const getYearsSince = (dt) => {
+export const getYearsSince = (dt) => {
   const birthyear = new Date(dt).getTime();
   const current = new Date().getTime();
   const years = (current - birthyear) / 1000 / 60 / 60 / 24 / 365.25;
@@ -36,14 +36,13 @@ export const CV = {
   phone: "+49 176 3838 5646",
   email: "kontakt@danielmoessner.de",
   birthday: "1998-02-02",
-  age: getYearsSince("1998-02-02"),
   linkedin: "https://www.linkedin.com/in/danielmoessner/",
   github: "https://github.com/danielmoessner",
   // oneliner: "A swiss army knife kind of Full-Stack Engineer, well versed in Python and Vue, aiming for maintainable code.",
   oneliner:
     "Full Stack Engineer - Interested in Software Architecture, DevOps, CI/CD, Python, Typescript, Domain-Driven-Design and aiming for better software faster.",
   summary: `More than ${numberToWord(
-    getYearsSince(programmingStartYear)
+    getYearsSince(programmingStartYear),
   )} years of professional experience working with Python in various areas, including data management systems for market research, machinery rental services, government procurement, law clinic case management, and multiple smaller projects. Additionally deep understanding of Typescript, having built numerous frontends from the ground up. Experienced in setting up CI/CD Pipelines with GitHub Actions and automated testing and deployment.`,
   skills: {
     Backend: "Python, Django, Flask, FastAPI, JSON",

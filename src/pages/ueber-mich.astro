@@ -4,7 +4,7 @@ import CvStep from "../components/CvStep.astro";
 import Footer from "../components/Footer.astro";
 import Nav from "../components/Nav.astro";
 import Layout from "../layouts/Layout.astro";
-import { CV } from "../content/_cv.js";
+import { CV, getYearsSince } from "../content/_cv.js";
 import { CERTIFICATES } from "../content/_certificates";
 ---
 
@@ -14,7 +14,8 @@ import { CERTIFICATES } from "../content/_certificates";
     <article>
       <h1 style="margin-top: 0;">Über Mich</h1>
       <p>
-        Located in {CV.location} and {CV.age} years old <br />
+        Located in {CV.location} and {getYearsSince(CV.birthday)} years old <br
+        />
         <a target="_blank" href={CV.linkedin}>LinkedIn</a>
         <br />
         <a target="_blank" href={CV.github}>GitHub</a>
@@ -60,7 +61,12 @@ import { CERTIFICATES } from "../content/_certificates";
       <h3>Career Summary</h3>
       {
         CV.steps.map((step) => (
-          <CvStep date={step.date} company={step.company} subtitle={step.job} duration={step.duration}>
+          <CvStep
+            date={step.date}
+            company={step.company}
+            subtitle={step.job}
+            duration={step.duration}
+          >
             <ul>
               {step.work.map((w) => (
                 <li>{w}</li>
