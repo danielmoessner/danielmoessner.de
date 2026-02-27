@@ -1,6 +1,5 @@
 ---
 import { CV } from "../content/_cv.js";
-import { formatDateString } from "../utils/date";
 import { cleanLink } from "../utils/link";
 ---
 
@@ -63,38 +62,6 @@ import { cleanLink } from "../utils/link";
         ))
       }
     </div>
-    {
-      CV.references && (
-        <div id="employment-references">
-          <h2>Employment References</h2>
-          <ul>
-            {CV.references.map((c) => (
-              <li>
-                <a target="_blank" href={import.meta.env.VITE_URL + c.pdf}>
-                  {formatDateString(c.date)} | {c.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )
-    }
-    {
-      CV.certificates && (
-        <div id="certificates">
-          <h2>Certificates</h2>
-          <ul>
-            {CV.certificates.map((c) => (
-              <li>
-                <a target="_blank" href={import.meta.env.VITE_URL + c.pdf}>
-                  {formatDateString(c.date)} | {c.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )
-    }
   </body>
 </html>
 

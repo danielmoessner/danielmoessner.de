@@ -56,8 +56,9 @@ export const CV = {
       company: "Peter Park Systems GmbH",
       job: "Full-Stack Engineer",
       work: [
-        "Working with NestJS, Vue3, Python, PostgreSQL, HTML and TailwindCSS.",
-        "Working on current sprint tickets within a broad range of services and frontends.",
+        "Working with NestJS, Vue3, Python, PostgreSQL, Redash, Retool, Kubernetes, AWS and TailwindCSS.",
+        "Replaced an old monolithic python application with NestJS microservices.",
+        "Working on increasing the global revenue by leveraging the income from violating parkers.",
       ],
     },
     {
@@ -111,7 +112,7 @@ export const CV = {
     },
     {
       date: "September 2017 - Today (Sole-Proprietor)",
-      duration: "8 years +",
+      duration: "9 years +",
       company: "Tortuga Webdesign",
       job: "Programmer",
       work: [
